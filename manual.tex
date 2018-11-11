@@ -1,0 +1,84 @@
+\documentclass[a4paper, 12pt]{report}
+\usepackage[brazil]{babel}
+\usepackage[utf8]{inputenc}
+% \usepackage[T1]{fontenc}
+\usepackage[pdftex]{hyperref}
+\usepackage{setspace}
+\usepackage[bmargin=2cm, tmargin=3cm, lmargin=3cm, rmargin=2cm]{geometry}
+\usepackage{listings}
+\lstset{basicstyle=\ttfamily\normalsize}
+\usepackage{url}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+\begin{document}
+
+% Definição do cabeçalho do manual
+  \begin{center}
+    \HRule \\[0.5cm]
+    \fontsize{12}{16}
+%     \fontfamily{qpl}%\fontseries{b}%
+%     \fontshape{sc} %\headlinecolor
+    {\Large \bfseries Manual para modelo de escrita de textos de Monografia para o Curso de BSI}
+    \HRule
+  \end{center}
+  \vspace{0.5cm}
+  
+  {\it {\bfseries Resumo}. Este artigo tem como objetivo descrever o estilo a ser usado na confeção de 
+monografias de TCC para o curso de Bacharelado em Sistemas de Informação na UFGD. É apresentada uma breve 
+introdução de como os Trabalhos de Conclusão de Curso devem ser elaborados utilizando o modelo LaTeX para a 
+confecção do mesmo. }
+
+\section*{1. Informações gerais}
+
+Para o modelo de Trabalho de Conclusão de Curso foi usado o formato de papel A4, com 3.0 cm para margem 
+superior e margem esquerda e 2.0 cm para margem inferior e margem 
+direita. A fonte principal utilizada é a padrão do LaTeX, Computer Mordern, tamanho 12. Para o uso do 
+modelo, são usados os pacotes babel, inputenc, hyperref, fancyhdr, multicol, float, multirow, graphicx, 
+geometry, etoolbox, lmodern e setspace, portanto, é recomendado que baixe esses pacotes individualmente 
+antes de usar o modelo.
+
+\section*{2. Estrutura do TCC}
+
+Para a criação de um trabalho de TCC são necessárias diversas páginas obrigatórias tais como folha de 
+rosto, resumo, sumário, referências bibliográficas, e caso seja a versão final, folha de aprovação e 
+de 
+agradecimentos (opcional).
+
+Para criar as páginas do TCC neste modelo\cite{MAT14}, basta utilizar os comandos
+\lstinline[breaklines=true]!\maketitle! para criar a capa,  
+\lstinline[breaklines=true]!\folhaderosto! para criar a folha de rosto, 
+\lstinline[breaklines=true]!\folhadeaprovacao! para a folha de aprovação (se necessário) e 
+\lstinline[breaklines=true]!\tableofcontents! para o sumário. Para criar uma página de 
+agradecimentos, basta abrir o arquivo {\bfseries agradecimentos.tex} e inserir o texto.
+
+Para criar o resumo de seu trabalho, basta abrir o arquivo {\bfseries resumo.tex} e inserir o resumo na 
+parte indicada. Similarmente, para inserir a introdução, os capítulos do trabalho e a conclusão, basta 
+abrir os arquivos 
+repectivos aos capítulos {\bfseries introducao.tex}, {\bfseries cap1.tex}, {\bfseries cap2.tex}, {\bfseries 
+conclusao.tex} e inserir o texto no lugar do texto de exemplo.
+
+\section*{3. Imagens e Tabelas}
+
+As imagens e tabelas, junto com suas legendas, devem estar centralizadas, com sua legenda logo abaixo 
+fazendo referência a mesma. Exemplos de como criar imagens e tabelas são fornecidades nos capítulos de 
+exemplo do modelo.
+
+\section*{4. Referências bibliográficas}
+
+Para criar as referências bibliográficas, é necessário criar um arquivo com a extensão .bib, e inserir o 
+tipo de referência no formato BibTeX. Uma maneira simples de obter referências no formato BibTeX é acessar 
+o Google Acadêmico\cite{GOOG}, ir na aba de configurações e ativar a opção ``Mostre links para importar 
+citações para o BibTeX''. Depois de salvar as configurações, basta pesquisar o trabalho que deseja 
+referenciar e escolher a opção ``Importe para o BibTeX''.
+
+Para citar algum trabalho que já esteja referenciado é necessário usar o comando 
+\lstinline[breaklines=true]!\cite{}! e colocar entre as chaves o nome de identificação da referência 
+bibliográfica.
+
+
+  \bibliographystyle{acm}
+  \bibliography{manual}
+
+
+\end{document}

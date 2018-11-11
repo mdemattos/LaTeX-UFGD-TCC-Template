@@ -1,0 +1,102 @@
+% Chama o arquivo facet-bsi.cls que contém o modelo.
+\documentclass{facet-bsi}
+
+% Coloque aqui o nome da Instituição, caso esteja diferente.
+\institution{Universidade Federal da Grande Dourados}
+
+% Coloque aqui o nome da faculdade, caso esteja diferente.
+\faculty{Faculdade de Ciências Exatas e Tecnologia}
+
+% Coloque aqui o nome do curso.
+\course{Bacharelado em Sistemas de Informação}
+
+% Aqui você define o título deste trabalho.
+\title{Modelo para escrita de textos de Monografia para o Curso de BSI}
+
+% Aqui você define o nome do seu orientador.
+\leader{Rodrigo Porfírio da Silva Sacchi}
+
+% Caso seu trabalho tenha um co-orientador, descomente a primeira linha, coloque o nome do seu orientador
+% e comente ou apague a linha com as chaves vazias.
+
+\defcoleader{Co-Orientador: }
+% \defcoleader{}
+\coleader{Ciclano de Tal}
+% \coleader{}
+
+% Coloque aqui o(s) nome(s) do(s) autor(es), separe os nomes com \\ caso tenha mais de um autor.
+\author{Matheus de Mattos Pereira \\ Fulano de Tal}
+
+% Aqui você define o mês que será exibido no trabalho, deixe um espaço após o mês.
+\mes{Junho }
+
+% Aqui você define o ano que será exibido no trabalho.
+\ano{2014}
+
+% Aqui você define o dia da sua apresentação do TCC.
+\dia{20 }
+% Para a versão final de seu TCC é necessário inserir os dois membros que irão fazer parte da banca 
+% avaliadora. Caso esteja fazendo a versão final de seu TCC, insira o nome dos membros da banca, ou senão, 
+% deixe os comandos seguintes com chaves vazias. {}
+\firstmember{Profª. Drª Bruxa do 71}
+\secondmember{Prof. Dr. Seu Madruga}
+
+
+\begin{document}
+  % Diz que o documento deve começar na página 1 e em algarismos romanos.
+  \setcounter{page}{1}
+  \pagenumbering{roman}
+   
+  % Com esse comando você cria a capa do trabalho.
+  \maketitle
+
+  % Com esse comando você cria a folha de rosto do trabalho.
+  \folhaderosto
+    
+  % Para a versão final de seu TCC, precisa imprimir uma folha de aprovação.
+  % Descomente a linha abaixo para criar a folha de aprovação.
+  \folhadeaprovacao
+  
+%   \fichacatalografica
+  
+  % Define o espaçamento entre as linhas, não comente.
+  \onehalfspacing
+
+  % Para a versão final de seu TCC, é possível colocar agradecimentos a pessoas que te ajudaram. É 
+  % importante colocar um agradecimento pelo menos para o orientador. 
+  \include{agradecimentos}
+  
+  % Através dessa seção você pode inserir seu resumo do trabalho.
+  \include{resumo}
+
+  % Essa linha controla as configurações do estilo dos capítulos, não é necessário alterar.
+  \estilodapagina
+  
+  % Essa linha cria o sumário do trabalho.
+  \tableofcontents \thispagestyle{empty}
+  
+  % Os comandos \setcounter e \pagenumbering{} servem para definir a númeração de páginas como 
+  % arábica a partir da primeira página do primeiro capítulo. Portanto, não alterem essas duas 
+  % linhas seguintes 
+  
+  
+  % Abra o arquivo introducao.tex para editar o primeiro capítulo do texto.
+  
+  \include{introducao}
+  
+  % A partir deste ponto você pode inserir e/ou retirar capítulos do texto conforme a demanda, com
+  % exceção dos capítulos de conclusão e referências bibliográficas.
+  \include{cap2}
+  \include{cap3}
+ 
+ 
+  % Abra o arquivo conclusao.tex para editar a conclusão de seu texto.
+  \include{conclusao}
+  
+  % -------------------------------------------------------------------------------------------
+  % Descomente estas duas linhas para inserir o capítulo de referências bibliográficas no texto.
+  % Você deve criar um arquivo chamado ourbib.bib, contendo a coleção de sua bibliografia.
+  \bibliographystyle{acm}
+  \bibliography{ourbib}
+
+\end{document}
